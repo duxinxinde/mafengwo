@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>蚂蜂窝</title>
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/media.css">
+    <link rel="stylesheet" href="assets/css/order.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_387257_ktukd140m3dw8kt9.css">
+
+</head>
+
+<body>
+    <header class="header">
+        <div  class="mfw-header">
+            <div class="header-wrap">
+                <div class="head-logo"><a class="mfw-logo" title="蚂蜂窝自由行" href="/"></a></div>
+                <ul class="head-nav">
+                    <li><a href="http://localhost:8080/mafengwo/View/main.php" title="">首页</a></li>
+                    <!-- <li><a href="./list.html" title="">目的地</a></li> -->
+                    <li><a href="http://localhost:8080/mafengwo/qxm/travesgonglue.php" title="">旅游攻略</a></li>
+                    <li class="head-nav-dropdown">
+                        <a href="" class="drop-toggle" title="">自由行商城</a>
+                    </li>
+                </ul>
+                <div>
+                    <iframe src="http://localhost:8080/mafengwo/View/iframe.php" frameborder=0 scrolling="none" style="height:59px;padding-top:13px;margin-left:120%"></iframe>
+                </div>
+            </div>
+            <div class="shadow"></div>
+        </div>
+    </header>
+    <div class="dropdown-bar">
+
+    </div>
+    <div class="container">
+        <div class="orderhtml">
+            <div class="crumb">
+                <div class="item">
+                    <a href="./sales.html" class="crumb-index">自由行首页</a>
+                    <em>></em>
+                </div>
+                <div class="item">
+                            <a class="crumb-index" href="javascript:void(0)">自由行商城</a>
+                    <em>></em>
+                </div>
+                <a href="" id="currentcity">currentcity</a>
+            </div>
+            <div class="sales-intro clearfix">
+                <div class="intro-l">
+                    <div class="sales-photo">
+                        <div class="carousel"><!-- 轮播图 -->
+                            <ul id="carimgs2" class="carimgs">
+                                <li><img id="img1" alt=""></li>
+                                <li><img id="img2" alt=""></li>
+                                <li><img id="img3" alt=""></li>
+                            </ul>
+                            <ol id="diet2" class="cir navFlex">
+                                <li class="diet-active"></li>
+                                <li></li>
+                                <li></li>
+                            </ol>
+                            <div id="prev2" class="slider prev"><i></i></div>
+                            <div id="next2" class="slider next"><i></i></div>
+                        </div><!-- /轮播图 -->
+                    </div>
+                </div>
+                <div class="intro-r">
+                    <div class="sales-title">
+                        <h1 id="title">title</h1>
+                    </div>
+                    <div class="price-panel clearfix">
+                        <div class="item-price">
+                            <em>￥</em>
+                            <strong id="price">price</strong>
+                            <span>
+                                <a href="">价格说明</a>
+                                <span>
+                                    此价格区间是指，本产品可售日期范围内的最低价和最高价。</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="info-panel">
+                        <div class="info-tips clearfix">
+                            <span class="label">预订须知</span>
+                            <div class="info-tips-box">
+                                此产品为二次确认产品，在支付成功时间起的24小时内供应商将进行二次确认，核实是否有位
+                            </div>
+                        </div>
+                    </div>
+                    <div class="r-line"></div>
+                    <div class="property-panel">
+                        <div id="stock_wrap">
+                            <dl class="tj-type clearfix top-bar">
+                                <dt class="label">选择日期</dt>
+                                <dd>
+                                    <div class="ui-date">
+                                        <div class="trigger">
+                                            <input type="date" value="2018-01-20">
+                                        </div>
+
+                                    </div>
+                                </dd>
+                            </dl>
+                            <dl class="tj-type clearfix">
+                                <dt class="label">数量选择</dt>
+                                <dd>
+                                    <div class="amount">
+                                        <span class="input">
+                                            <span>出行人数</span>
+                                            <span id="num" class="num">1</span>
+                                        </span>
+                                        <span class="btns">
+                                            <a onclick="add()" href="javascript:void(0)" class="btn-plus"><i>+</i></a>
+                                            <a onclick="inv()" href="javascript:void(0)" class="btn-minus"><i>-</i></a>
+                                        </span>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="action-panel clearfix">
+                        <div class="total">
+                            <em>￥</em>
+                            <strong id="totalprice">price*num</strong>
+
+                        </div>
+                        <div class="bug">
+                            <a id="buy">立即购买</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sales-nav-wrap">
+                <div class="sales-nav">
+                    <ul class="clearfix">
+                        <li class="on"><a href="#target_introduce">产品介绍</a></li>
+                        <li class=""><a href="#target_cost">费用说明</a></li>
+                        <li class=""><a href="#target_purchase">购买须知</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="detail-wrapper clearfix">
+                <div class="main-detail">
+                    <a href="" id="target_introduce" class="nav-anchor"></a>
+                    <div class="m-panel">
+                        <div id="maincontent" class="m-hd">
+                            <h2>产品介绍</h2>
+                        </div>
+
+                    </div>
+                    <a href="" id="target_cost" class="nav-anchor"></a>
+                    <div id="paymentcontent" class="m-panel m-cost">
+                        <div class="m-hd">
+                            <h2>费用说明</h2>
+                        </div>
+                    </div>
+                    <a href="" id="target_purchase" class="nav-anchor"></a>
+                    <div id="mentioncontent" class="m-panel m-notice">
+                        <div class="m-hd">
+                            <h2>购买须知</h2>
+                        </div>
+
+                    </div>
+                    <a href="" id="target_review" class="nav-anchor"></a>
+                </div>
+            </div>
+            <div class="m-recommend">
+                <ul class="db clearfix">
+<!--                <script>
+                    var look=[
+                        {"place":"鼓浪屿","salestype":"机+酒","app":true,"jian":"50","content":"上海直飞厦门3-4日自由行( 市中心3-5星酒店+鼓浪屿酒店随心搭+赠旅游...","yishou":218,"price":699,"img":"look1.jpeg"},
+                        {"place":"厦门","salestype":"机+酒","app":false,"jian":"","content":"上海直飞厦门3-4天自由行（可选市区五星酒店+鼓浪屿酒店+航班随心搭）","yishou":88,"price":710,"img":"look2.jpeg"},
+                        {"place":"厦门","salestype":"机+酒","app":false,"jian":"","content":"上海直飞厦门3-4天自由行（精选3-5星市区酒店+可选鼓浪屿酒店+赠早餐+...","yishou":17,"price":688,"img":"look3.jpeg"},
+                        {"place":"厦门","salestype":"机+酒","app":true,"jian":"100","content":"上海直飞厦门3-4日自由行( 市中心酒店+鼓浪屿酒店随心搭+精美早餐+托...","yishou":0,"price":690,"img":"look4.jpeg"},
+                        {"place":"厦门","salestype":"机+酒","app":true,"jian":"100","content":"上海直飞厦门3-4日自由行( 市中心酒店+鼓浪屿酒店随心搭+精美早餐+托...","yishou":0,"price":690,"img":"look5.jpeg"},
+                        {"place":"厦门","salestype":"机+酒","app":true,"jian":"100","content":"上海直飞厦门3-4日自由行( 市中心酒店+鼓浪屿酒店随心搭+精美早餐+托...","yishou":0,"price":690,"img":"look6.png"},
+                        {"place":"厦门","salestype":"机+酒","app":true,"jian":"100","content":"上海直飞厦门3-4日自由行( 市中心酒店+鼓浪屿酒店随心搭+精美早餐+托...","yishou":0,"price":690,"img":"look7.jpeg"},
+                        {"place":"厦门","salestype":"机+酒","app":true,"jian":"100","content":"上海直飞厦门3-4日自由行( 市中心酒店+鼓浪屿酒店随心搭+精美早餐+托...","yishou":0,"price":690,"img":"look8.jpeg"}
+                    ];
+                    var liststr='';
+                    look.forEach(function(v,k){
+                        liststr+='<li class="item"><a href=""><div class="image"><img src="assets/images/uploads/sales-intro/'+v.img+'"><span class="mark-type"><strong>'+v.place+'</strong><span>机+酒</span></span>';
+                        if(v.app==true){
+                            liststr+='<div class="app-minus"><span class="minline"><i></i>APP下单</span><div>立减<b>'+v.jian+'</b>元</div></div>';
+                        }
+
+                        liststr+=' </div><div class="info"><h4>'+v.content+'</h4><div class="price"><strong>￥'+v.price+'<span>起/人</span></strong><span>已售'+v.yishou+'件</span></div></div></a></li>'
+                    });
+                    document.write(liststr);
+                </script>-->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="mfw-toolbar" id="toolbar">
+        <div class="toolbar-outer toolbarfix">
+            <a href="javascript:void(0);" title="" class="btn top">
+                <i class="icon-top"></i>
+                <em>返回顶部</em>
+            </a>
+            <a href="#top" title="" class="btn feedback">
+                <i class="icon-feedback"></i>
+                <em>意见反馈</em>
+            </a>
+            <div href="#top" title="" class="btn code">
+                <i class="icon-code"></i>
+                <a href="" title="" class="codeimg"><img src="assets/images/icon/code.jpeg"></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="ft-content">
+            <div class="ft-info">
+                <dl class="ft-info-col ft-info-intro">
+                    <dt>中国领先的自由行服务平台</dt>
+                    <dd>覆盖全球200多个国家和地区</dd>
+                    <dd><strong>100,000,000</strong> 位旅行者</dd>
+                    <dd><strong>920,000</strong> 家国际酒店</dd>
+                    <dd><strong>21,000,000</strong> 条真实点评</dd>
+                    <dd><strong>382,000,000</strong> 次攻略下载</dd>
+                    <dd><a class="highlight" href="" target="_blank">中国旅游行业第一部“玩法”</a></dd>
+                </dl>
+                <dl class="ft-info-col ft-info-about">
+                    <dt>关于我们</dt>
+                    <dd><a href="/s/about.html">关于蚂蜂窝</a></dd>
+                    <dd><a href="/s/property.html">网络信息侵权通知指引</a></dd>
+                    <dd><a href="/s/private.html">隐私政策</a></dd>
+                    <dd><a href="/s/agreement.html">服务协议</a></dd>
+                    <dd><a href="/s/contact.html">联系我们</a></dd>
+                    <dd><a class="highlight" title="蚂蜂窝团队招聘" target="_blank" href="">加入蚂蜂窝</a></dd>
+                </dl>
+                <dl class="ft-info-col ft-info-service">
+                    <dt>旅行服务</dt>
+                    <dd>
+                        <ul class="clearfix">
+                            <li><a target="_blank" href="/gonglve/">旅游攻略</a></li>
+                            <li><a target="_blank" href="/hotel/">酒店预订</a></li>
+                            <li><a target="_blank" href="/sales/">旅游特价</a></li>
+                            <li><a target="_blank" href="http://zuche.mafengwo.cn/">国际租车</a></li>
+                            <li><a target="_blank" href="/wenda/">旅游问答</a></li>
+                            <li><a target="_blank" href="http://z.mafengwo.cn">旅游指南</a></li>
+                            <li><a target="_blank" href="http://huoche.mafengwo.cn">订火车票</a></li>
+                            <li><a target="_blank" href="/travel-news/">旅游资讯</a></li>
+                        </ul>
+                    </dd>
+                </dl>
+                <dl class="ft-info-col ft-info-qrcode">
+                    <dd>
+                        <span class="ft-qrcode-tejia"></span>
+                        <p>蚂蜂窝良品<br>官方服务号</p>
+                    </dd>
+                    <dd>
+                        <span class="ft-qrcode-weixin"></span>
+                        <p>蚂蜂窝自由行<br>订阅号</p>
+                    </dd>
+                </dl>
+                <dl class="ft-info-social">
+                    <dt>关注我们</dt>
+                    <dd>
+                        <a class="ft-social-weibo" target="_blank" href=""><i></i></a>
+                        <a class="ft-social-qqt" target="_blank" href=""><i></i></a>
+                        <a class="ft-social-qzone" target="_blank" href=""><i></i></a>
+                    </dd>
+                </dl>
+            </div>
+            <div class="ft-links">
+                <a target="_blank" href="http://china.makepolo.com/">马可波罗</a>
+                <a target="_blank" href="http://www.onlylady.com/" se_prerender_url="complete">Onlylady女人志</a>
+                <a target="_blank" href="http://trip.elong.com/">艺龙旅游指南</a><a target="_blank" href="http://www.cncn.com">欣欣旅游网</a><a target="_blank" href="http://www.8264.com/">户外运动</a><a target="_blank" href="http://www.yue365.com/">365音乐网</a><a target="_blank" href="http://ishare.iask.sina.com.cn/">爱问共享资料</a><a target="_blank" href="http://www.uzai.com/">旅游网</a><a target="_blank" href="http://www.zongheng.com/">小说网</a><a target="_blank" href="http://www.xuexila.com/">学习啦</a><a target="_blank" href="http://www.yododo.com">游多多自助游</a><a target="_blank" href="http://www.zhcpic.com/">问答</a><a target="_blank" href="http://huoche.mafengwo.cn/">火车时刻表</a><a target="_blank" href="http://www.lvmama.com">驴妈妈旅游网</a><a target="_blank" href="http://www.haodou.com/">好豆美食网</a><a target="_blank" href="http://www.taoche.com/">二手车</a><a target="_blank" href="http://www.lvye.cn">绿野户外</a><a target="_blank" href="http://www.tuniu.com/">途牛旅游网</a><a target="_blank" href="http://www.mapbar.com/">图吧</a><a target="_blank" href="http://www.chnsuv.com">SUV联合越野</a><a target="_blank" href="http://www.uc.cn/">手机浏览器</a><a target="_blank" href="http://sh.city8.com/">上海地图</a><a target="_blank" href="http://www.tianqi.com/">天气预报查询</a><a target="_blank" href="http://www.ly.com/">同程旅游</a><a target="_blank" href="http://www.tieyou.com/">火车票</a><a target="_blank" href="http://you.ctrip.com/">携程旅游</a><a target="_blank" href="http://www.jinjiang.com">锦江旅游</a><a target="_blank" href="http://www.huoche.net/">火车时刻表</a><a target="_blank" href="http://www.tripadvisor.cn/" se_prerender_url="complete">TripAdvisor</a><a target="_blank" href="http://www.tianxun.com/">天巡网</a><a target="_blank" href="http://www.mayi.com/">短租房</a><a target="_blank" href="http://www.zuzuche.com">租租车</a><a target="_blank" href="http://www.5fen.com/">五分旅游网</a><a target="_blank" href="http://www.zhuna.cn/">酒店预订</a><a target="_blank" href="http://www.ailvxing.com">爱旅行网</a><a target="_blank" href="http://360.mafengwo.cn/all.php">旅游</a><a target="_blank" href="http://vacations.ctrip.com/">旅游网</a><a target="_blank" href="http://www.wed114.cn" se_prerender_url="complete">wed114结婚网</a><a target="_blank" href="http://www.chexun.com/">车讯网</a><a target="_blank" href="http://www.aoyou.com/">遨游旅游网</a><a target="_blank" href="http://www.91.com/">手机</a>
+                <a href="http://www.mafengwo.cn/s/link.html" target="_blank">更多友情链接&gt;&gt;</a>
+            </div>
+            <div class="ft-copyright">
+                <a href="" title="" class="f f1"></a>
+                <a href="" title="" class="f f2"></a>
+                <a href="" title="" class="f f3"></a>
+                <a href="" class="ft-mfw-logo"><i></i></a>
+                <p>© 2017 Mafengwo.cn
+                    <a href="" target="_blank" >京ICP备11015476号</a> 京公网安备110105013401号
+                    <a href="" target="_blank">京ICP证110318号</a>
+                </p>
+                <p>
+                    <a href="" target="_blank">营业执照</a> 新出网证(京)字242号 全国统一客服电话：
+                    <span class="highlight">4006-345-678</span>
+                    <a target="_blank" href="" class="highlight">网站地图</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/jquery-1.11.3.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/json.js"></script>
+    <script>
+        totalnum = 1;
+        pay = "";
+
+        function add() {
+            var i = $("#num").html()
+            i++
+            $("#num").html(i)
+            totalnum++
+            $("#totalprice").html(totalnum*pay)
+        }
+
+        function inv() {
+            var i = $("#num").html()
+            i<=1?i=1:i--
+            totalnum<=1?totalnum=1:totalnum--
+            $("#totalprice").html(totalnum*pay)
+            $("#num").html(i)
+        }
+
+        function getQueryString() {
+            var qs = location.search.substr(1), // 获取url中"?"符后的字串
+                args = {}, // 保存参数数据的对象
+                items = qs.length ? qs.split("&") : [], // 取得每一个参数项,
+                item = null,
+                len = items.length;
+
+            for(var i = 0; i < len; i++) {
+                item = items[i].split("=");
+                var name = decodeURIComponent(item[0]),
+                    value = decodeURIComponent(item[1]);
+                if(name) {
+                    args[name] = value;
+                }
+            }
+            return args;
+        }
+
+        var qs = getQueryString();
+
+        pid = qs["pid"]; // abc
+
+        $(function(){
+            pop();
+            function pop() {
+                var st = $(window).scrollTop(),
+                    introt = $('#target_introduce').offset().top,
+                    costt = $('#target_cost').offset().top,
+                    purt = $('#target_purchase').offset().top,
+                    revt = $('#target_review').offset().top,
+                    salest = $('.sales-nav-wrap').offset().top,
+                    detailH=$('.detail-wrapper').height(),
+                    detailt=$('.detail-wrapper').offset().top,
+                    sidebarH=$('.side-bar').height();
+
+                if (st > introt-30 && st < costt-30) {
+                    $('.sales-nav-wrap li').eq(0).addClass('on').siblings().removeClass('on');
+                }
+                if (st > costt-30 && st < purt-30) {
+                    $('.sales-nav-wrap li').eq(1).addClass('on').siblings().removeClass('on');
+                }
+                if (st > purt -30&& st < revt-30) {
+                    $('.sales-nav-wrap li').eq(2).addClass('on').siblings().removeClass('on');
+                }
+                if (st > revt-30) {
+                    $('.sales-nav-wrap li').eq(3).addClass('on').siblings().removeClass('on');
+                }
+                // console.log(st - $('.sales-nav-wrap').offset().top);
+                if (st > salest) {
+                    $('.sales-nav-wrap .sales-nav').addClass('fixed');
+                }
+                if (st < salest) {
+                    $('.sales-nav-wrap .sales-nav').removeClass('fixed');
+                    $('.detail-wrapper .side-bar').removeClass('barfixed');
+                }
+
+                if (st > introt) {
+                    $('.detail-wrapper .side-bar').addClass('barfixed');
+                }
+                // 如果到达底部，右边绑定栏要固定到底部
+                if(st>(detailt+detailH-sidebarH)){
+                    $('.detail-wrapper .side-bar').addClass('absolute');
+                }
+                if(st<(detailt+detailH-sidebarH)){
+                    $('.detail-wrapper .side-bar').removeClass('absolute');
+                }
+            }
+            $(window).scroll(function() {
+                pop();
+            });
+        });
+
+        $("#buy").click(function(){
+                $.ajax({
+            url: "http://localhost:8080/mafengwo/store/mfw/framework/go/index.php?controller=user&method=getsession",
+            dataType: "text",
+            success:function(data){
+                if (data == 0) {
+                    alert("请先登录")
+                    location.href = "http://localhost:8080/mafengwo/View/login.php"
+                }
+                else{
+                    location.href = "confirm.html?pid="+pid
+                }
+            }
+        })
+        })
+
+
+        $.ajax({
+            url: "http://localhost:8080/mafengwo/store/mfw/framework/go/index.php?controller=currentProduct&method=query",
+            method: "GET",
+            dataType: "json",
+            data: {"pid":pid},
+            success: function (data) {
+                var maincontent = data[0]
+                var paymencontent = data[1]
+                var mentioncontent = data[2]
+                $("#maincontent").append(maincontent)
+                $("#paymentcontent").append(paymencontent)
+                $("#mentioncontent").append(mentioncontent)
+                $("#price").html(data["pay"])
+                $("#currentcity").html(data["cname"])
+                $("#title").html(data["title"])
+                $("#totalprice").html(data["pay"])
+                pay = data["pay"]
+                $("#img1").attr("src",data["img1"])
+                $("#img2").attr("src",data["img2"])
+                $("#img3").attr("src",data["img3"])
+               // $("#buy").attr("href","confirm.html?pid="+pid)
+            }
+        })
+
+
+
+    </script>
+</body>
+</html>
